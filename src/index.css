@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700;800;900&family=Special+Elite&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Manga Portfolio Design System
+   Paper-cream background, sharp ink lines, halftone textures, dynamic SFX accents.
+   All colors HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 42 35% 94%;
+    --foreground: 0 0% 6%;
+
+    --paper: 42 40% 92%;
+    --paper-light: 42 50% 96%;
+    --ink: 0 0% 6%;
+    --ink-soft: 0 0% 22%;
+    --ink-muted: 0 0% 42%;
+
+    --card: 42 50% 96%;
+    --card-foreground: 0 0% 6%;
+
+    --popover: 42 50% 96%;
+    --popover-foreground: 0 0% 6%;
+
+    --primary: 0 0% 6%;
+    --primary-foreground: 42 50% 96%;
+
+    --secondary: 42 30% 88%;
+    --secondary-foreground: 0 0% 6%;
+
+    --muted: 42 25% 86%;
+    --muted-foreground: 0 0% 35%;
+
+    --accent: 8 88% 54%;
+    --accent-foreground: 42 50% 96%;
+
+    --sfx-red: 8 88% 54%;
+    --sfx-yellow: 48 100% 55%;
+    --sfx-blue: 210 90% 55%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 6%;
+    --input: 0 0% 6%;
+    --ring: 0 0% 6%;
+
+    --radius: 0.25rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 42 50% 96%;
+    --paper: 0 0% 10%;
+    --paper-light: 0 0% 14%;
+    --ink: 42 50% 96%;
+    --ink-soft: 42 30% 80%;
+    --ink-muted: 42 15% 65%;
+    --card: 0 0% 10%;
+    --card-foreground: 42 50% 96%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 42 50% 96%;
+    --primary: 42 50% 96%;
+    --primary-foreground: 0 0% 6%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 42 50% 96%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 42 15% 65%;
+    --accent: 8 88% 54%;
+    --accent-foreground: 42 50% 96%;
+    --border: 42 50% 96%;
+    --input: 42 50% 96%;
+    --ring: 42 50% 96%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(hsl(var(--ink) / 0.05) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+}
+
+@layer components {
+  /* Manga panel: thick black border, paper background, hard shadow */
+  .manga-panel {
+    @apply relative bg-[hsl(var(--paper-light))] border-[3px] border-ink overflow-hidden;
+    box-shadow: 6px 6px 0 0 hsl(var(--ink));
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .manga-panel:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0 0 hsl(var(--ink));
+  }
+
+  .manga-panel-flat {
+    @apply relative bg-[hsl(var(--paper-light))] border-[3px] border-ink overflow-hidden;
+  }
+
+  /* Halftone dot pattern overlay */
+  .halftone {
+    background-image: radial-gradient(hsl(var(--ink) / 0.55) 1.2px, transparent 1.4px);
+    background-size: 6px 6px;
+  }
+
+  .halftone-light {
+    background-image: radial-gradient(hsl(var(--ink) / 0.22) 1px, transparent 1.2px);
+    background-size: 5px 5px;
+  }
+
+  /* Diagonal speed-line background */
+  .speedlines {
+    background-image: repeating-linear-gradient(
+      135deg,
+      hsl(var(--ink)) 0 1px,
+      transparent 1px 9px
+    );
+  }
+
+  /* Manga sound effect text */
+  .sfx {
+    font-family: 'Bangers', system-ui, sans-serif;
+    letter-spacing: 0.04em;
+    -webkit-text-stroke: 2px hsl(var(--ink));
+    color: hsl(var(--paper-light));
+    text-shadow:
+      4px 4px 0 hsl(var(--ink)),
+      6px 6px 0 hsl(var(--accent));
+    line-height: 0.9;
+  }
+
+  .sfx-accent {
+    color: hsl(var(--accent));
+    -webkit-text-stroke: 2px hsl(var(--ink));
+    text-shadow: 3px 3px 0 hsl(var(--ink));
+  }
+
+  .display-font {
+    font-family: 'Bangers', system-ui, sans-serif;
+    letter-spacing: 0.03em;
+  }
+
+  .handwritten {
+    font-family: 'Special Elite', monospace;
+  }
+
+  /* Speech bubble */
+  .speech-bubble {
+    @apply relative bg-[hsl(var(--paper-light))] border-[3px] border-ink px-4 py-2 rounded-[40%_60%_55%_45%/55%_45%_60%_40%];
+  }
+
+  /* Corner page-number style label */
+  .panel-label {
+    @apply absolute top-0 left-0 bg-ink text-[hsl(var(--paper-light))] px-2 py-0.5 text-xs font-bold uppercase tracking-widest;
+    font-family: 'Bangers', system-ui, sans-serif;
+    letter-spacing: 0.15em;
+  }
+}
+
+@layer utilities {
+  .border-ink {
+    border-color: hsl(var(--ink));
+  }
+  .text-ink {
+    color: hsl(var(--ink));
+  }
+  .text-ink-soft {
+    color: hsl(var(--ink-soft));
+  }
+  .text-ink-muted {
+    color: hsl(var(--ink-muted));
+  }
+  .bg-ink {
+    background-color: hsl(var(--ink));
+  }
+  .bg-paper {
+    background-color: hsl(var(--paper));
+  }
+  .bg-paper-light {
+    background-color: hsl(var(--paper-light));
+  }
+}
