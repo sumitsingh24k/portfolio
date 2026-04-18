@@ -6,7 +6,7 @@ export const AboutPanel = () => {
       <div className="absolute inset-0 halftone-light opacity-40 pointer-events-none" />
       <div className="relative">
         <p className="display-font text-2xl md:text-3xl text-ink leading-tight">
-          “Highly focused IT Engineer & passionate developer.”
+          “Highly focused Software Engineer & passionate developer.”
         </p>
         <p className="mt-3 text-sm md:text-base text-ink-soft leading-relaxed">
           I possess a calm yet eager mind, dedicated to building scalable,

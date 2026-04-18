@@ -3,7 +3,7 @@ import { MangaPanel } from "./MangaPanel";
 
 const LINKS = [
   { icon: Mail, label: "sumitharisingh@gmail.com", href: "mailto:sumitharisingh@gmail.com" },
-  { icon: Linkedin, label: "linkedin.com/in/sumit-singh", href: "https://linkedin.com/in/sumit-singh" },
+  { icon: Linkedin, label: "linkedin.com/in/sumit-singh-964871260", href: "https://www.linkedin.com/in/sumit-singh-964871260/" },
   { icon: Github, label: "github.com/sumitsingh24k", href: "https://github.com/sumitsingh24k" },
   { icon: Code2, label: "leetcode.com/sumit24k", href: "https://leetcode.com/sumit24k" },
 ];
