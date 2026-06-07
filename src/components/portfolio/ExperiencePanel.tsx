@@ -9,26 +9,39 @@ import mangaFinisher from "@/assets/manga-finisher.png";
 
 const EXPERIENCE = [
   {
+    role: "Software Development Engineer",
+    company: "SwapSo · Remote",
+    period: "May 2026 – Present",
+    enemy: "AUTH CHAOS",
+    sfx: "SECURE!",
+    points: [
+      "Built OTP auth backend with TTL expiry, rate limiting, CAPTCHA & retry logic — cutting DB load and verification latency.",
+      "Integrated Hubble gift-card rewards into a crypto wallet: 400+ brand catalogue, idempotent 1.25% USDC cashback, AES-256-GCM & HMAC-SHA256 webhooks.",
+      "Shipped React Native voucher UI; configured Redis Cloud, MongoDB Atlas & connection pooling for prod.",
+    ],
+    stack: ["Node.js", "TypeScript", "MongoDB", "Redis", "React Native"],
+  },
+  {
     role: "Software Developer (Consultant)",
-    company: "The Sibling Corp",
+    company: "The Sibling Corp · Remote",
     period: "Sep 2025 – Dec 2025",
     enemy: "MIDDLEMEN",
     sfx: "BREAK!",
     points: [
-      "Built Quick Basket — a full-stack platform connecting farmers directly to buyers, eliminating middlemen.",
-      "Developed and debugged a scalable end-to-end app using Node.js, MongoDB, React Native.",
+      "Shipped Quick Basket — farmer-to-consumer marketplace serving 500+ users on Android & iOS.",
+      "Architected scalable REST APIs and data models for end-to-end order management & mobile deployment.",
     ],
-    stack: ["Node.js", "MongoDB", "React Native"],
+    stack: ["Node.js", "Express", "MongoDB", "React Native"],
   },
   {
     role: "Frontend Developer (Intern)",
-    company: "Growigh",
+    company: "Growigh · Remote",
     period: "Jul 2025 – Sep 2025",
-    enemy: "BAD UX",
+    enemy: "SLOW UX",
     sfx: "POLISH!",
     points: [
-      "Designed clean, intuitive UI to showcase inventory and boost user engagement.",
-      "Built fully responsive layouts spanning desktop and mobile.",
+      "Built pixel-perfect responsive React landing page — Lighthouse 64 → 91 via code splitting & asset optimization.",
+      "40% faster loads and 25% longer avg. session duration post-launch across Chrome, Firefox, Safari.",
     ],
     stack: ["React", "TypeScript", "Tailwind"],
   },

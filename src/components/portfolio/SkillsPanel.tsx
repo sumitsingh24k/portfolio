@@ -11,11 +11,18 @@ const SKILLS = [
   "React.js",
   "React Native",
   "Node.js",
+  "Express.js",
   "MongoDB",
+  "Redis Cloud",
   "MySQL",
-  "Git",
-  "Postman",
   "REST APIs",
+  "Webhooks",
+  "AES-256-GCM",
+  "ETL Pipelines",
+  "Chrome Extensions",
+  "NLP",
+  "Generative AI",
+  "Git",
 ];
 
 export const SkillsPanel = () => {

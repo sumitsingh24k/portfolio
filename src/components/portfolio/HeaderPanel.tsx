@@ -16,7 +16,7 @@ export const HeaderPanel = () => {
             SINGH
           </h1>
           <p className="mt-3 text-sm md:text-base text-ink-soft max-w-sm">
-            Software & AI Engineer · Full-Stack Developer · Blending AI & automation to build scalable, high-impact solutions.
+            SDE @ SwapSo · Backend & Full-Stack Engineer · Crypto, Fintech & Healthtech builder.
           </p>
         </div>
         <img
@@ -37,7 +37,7 @@ export const HeaderPanel = () => {
           <Mail className="w-3.5 h-3.5" /> Email
         </a>
         <a
-          href="https://www.linkedin.com/in/sumit-singh-964871260/"
+          href="https://linkedin.com/in/sumit-singh"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-1.5 border-[2px] border-ink px-2.5 py-1 bg-paper hover:bg-ink hover:text-paper-light transition-colors"

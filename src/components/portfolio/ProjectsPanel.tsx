@@ -5,22 +5,22 @@ import mangaVictor from "@/assets/manga-victor.png";
 
 const PROJECTS = [
   {
+    title: "JanSetu Health System",
+    tagline: "Voice-to-Map Outbreak Detection",
+    stack: "React · Node.js · MongoDB · Python · Google Maps · Twilio",
+    desc: "ASHA workers speak case reports; NLP extracts disease + location and a real-time map updates instantly. ML predicts outbreaks at 85% accuracy, cutting medication stockouts by 60%. Processes 1,000+ daily voice entries at 98% transcription accuracy.",
+  },
+  {
     title: "Gov Assist",
-    tagline: "Government Form-Filling Platform",
-    stack: "React · Vite · Chrome Extensions API · JavaScript",
-    desc: "Intelligently crawls .gov.in / .nic.in portals, extracts form schemas, auto-populates fields with document uploads. Real-time extension-to-webapp sync without bypassing CAPTCHA.",
+    tagline: "AI Gov Form Auto-Fill (Chrome Ext.)",
+    stack: "React · Vite · Chrome Extensions API · MyScheme · Twilio",
+    desc: "Matches user documents against MyScheme government API (92% accuracy) and auto-fills applications via a prompt-engineered AI agent — 80% reduction in completion time. Real-time extension-to-webapp sync with WhatsApp/SMS alerts.",
   },
   {
     title: "Adzap",
-    tagline: "Targeted Ad Campaign Platform",
-    stack: "Python · REST APIs · ETL Pipelines",
-    desc: "Full-stack ad-management for creating targeted campaigns and tracking performance. Analytics engine with ETL pipelines and an interactive insights dashboard.",
-  },
-  {
-    title: "AamchiLocal",
-    tagline: "Local Service Discovery Community",
-    stack: "Node.js · MongoDB · REST APIs",
-    desc: "API-driven service retrieval reducing manual lookup. End-to-end service management with full API docs and setup automation.",
+    tagline: "AI Ad Campaign Platform",
+    stack: "React · Python · Node.js · Generative AI · ETL",
+    desc: "Full-stack ad platform with RBAC, audience segmentation and an AI creative generation engine — 75% faster production. ETL analytics dashboard improved campaign ROI tracking by 50%.",
   },
 ];
 
