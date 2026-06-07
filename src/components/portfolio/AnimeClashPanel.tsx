@@ -2,23 +2,17 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { MangaPanel } from "./MangaPanel";
 import { SFX } from "./SFX";
+import animeZoro from "@/assets/anime-zoro.jpg";
+import animeLuffy from "@/assets/anime-luffy.jpg";
+import animeNaruto from "@/assets/anime-naruto.jpg";
+import animeSasuke from "@/assets/anime-sasuke.jpg";
 
-/**
- * Special crossover chapter — the anime energy behind the code.
- *
- * Card art is served from the `public/clash/` folder so the build never
- * breaks if a file is missing. To use your own images, drop these files in:
- *   public/clash/zoro.jpg
- *   public/clash/luffy.jpg
- *   public/clash/naruto.jpg
- *   public/clash/sasuke.jpg
- * (.png also works — just update the `img` paths below to match.)
- */
+/** Special crossover chapter — the anime energy behind the code. */
 const FIGHTERS = [
-  { name: "Zoro", move: "Santoryu · Onigiri", sfx: "ZAN!!!", img: "/clash/zoro.jpg", accent: "#e23b2e", rotate: -2 },
-  { name: "Luffy", move: "Gear 5 · Bajrang Gun", sfx: "DON!!!", img: "/clash/luffy.jpg", accent: "#f2c014", rotate: 1.5 },
-  { name: "Naruto", move: "Sage · Rasengan", sfx: "GOOO!!!", img: "/clash/naruto.jpg", accent: "#2a7de1", rotate: -1.5 },
-  { name: "Sasuke", move: "Chidori · Kirin", sfx: "BZZT!!!", img: "/clash/sasuke.jpg", accent: "#8b3fd6", rotate: 2 },
+  { name: "Zoro", move: "Santoryu · Onigiri", sfx: "ZAN!!!", img: animeZoro, accent: "#e23b2e", rotate: -2 },
+  { name: "Luffy", move: "Gear 5 · Bajrang Gun", sfx: "DON!!!", img: animeLuffy, accent: "#f2c014", rotate: 1.5 },
+  { name: "Naruto", move: "Sage · Rasengan", sfx: "GOOO!!!", img: animeNaruto, accent: "#2a7de1", rotate: -1.5 },
+  { name: "Sasuke", move: "Chidori · Kirin", sfx: "BZZT!!!", img: animeSasuke, accent: "#8b3fd6", rotate: 2 },
 ];
 
 const ClashCard = ({
@@ -46,16 +40,13 @@ const ClashCard = ({
         <div className="absolute inset-0 halftone opacity-[0.08] pointer-events-none z-10" />
 
         {failed ? (
-          /* Fallback shown until the real image is added to public/clash/ */
+          /* Safety net if the image ever fails to load */
           <div
-            className="absolute inset-0 flex flex-col items-center justify-center gap-1 speedlines"
+            className="absolute inset-0 flex items-center justify-center speedlines"
             style={{ background: `radial-gradient(circle at 50% 40%, ${fighter.accent}22, transparent 70%)` }}
           >
             <span className="display-font text-5xl md:text-6xl" style={{ color: fighter.accent }}>
               {fighter.name[0]}
-            </span>
-            <span className="handwritten text-[10px] text-ink-muted px-2 text-center">
-              add public/clash/{fighter.name.toLowerCase()}.jpg
             </span>
           </div>
         ) : (
