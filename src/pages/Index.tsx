@@ -4,6 +4,7 @@ import { EducationPanel } from "@/components/portfolio/EducationPanel";
 import { SkillsPanel } from "@/components/portfolio/SkillsPanel";
 import { ExperiencePanel } from "@/components/portfolio/ExperiencePanel";
 import { ProjectsPanel } from "@/components/portfolio/ProjectsPanel";
+import { AnimeClashPanel } from "@/components/portfolio/AnimeClashPanel";
 import { ImpactPanel } from "@/components/portfolio/ImpactPanel";
 import { HonoredPanel } from "@/components/portfolio/HonoredPanel";
 import { ContactPanel } from "@/components/portfolio/ContactPanel";
@@ -46,6 +47,7 @@ const Index = () => {
           <SkillsPanel />
           <ExperiencePanel />
           <ProjectsPanel />
+          <AnimeClashPanel />
           <ImpactPanel />
           <ManifestoPanel />
           <HonoredPanel />
