@@ -1,26 +1,24 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { MangaPanel } from "./MangaPanel";
 import { SFX } from "./SFX";
 
 /**
  * Special crossover chapter — the anime energy behind the code.
  *
- * NOTE: `img` values are temporary placeholders pulled from the existing
- * manga asset set so the section builds and renders out of the box.
- * Drop the real character art into `src/assets` (e.g. clash-zoro.png) and
- * point each `img` import at it to match the Lovable design.
+ * Card art is served from the `public/clash/` folder so the build never
+ * breaks if a file is missing. To use your own images, drop these files in:
+ *   public/clash/zoro.jpg
+ *   public/clash/luffy.jpg
+ *   public/clash/naruto.jpg
+ *   public/clash/sasuke.jpg
+ * (.png also works — just update the `img` paths below to match.)
  */
-import placeholderZoro from "@/assets/manga-slash.png";
-import placeholderLuffy from "@/assets/manga-fighter.png";
-import placeholderNaruto from "@/assets/manga-kick.png";
-import placeholderSasuke from "@/assets/manga-finisher.png";
-
 const FIGHTERS = [
-  { name: "Zoro", move: "Santoryu · Onigiri", sfx: "ZAN!!!", img: placeholderZoro, rotate: -2 },
-  { name: "Luffy", move: "Gear 5 · Bajrang Gun", sfx: "DON!!!", img: placeholderLuffy, rotate: 1.5 },
-  { name: "Naruto", move: "Sage · Rasengan", sfx: "GOOO!!!", img: placeholderNaruto, rotate: -1.5 },
-  { name: "Sasuke", move: "Chidori · Kirin", sfx: "BZZT!!!", img: placeholderSasuke, rotate: 2 },
+  { name: "Zoro", move: "Santoryu · Onigiri", sfx: "ZAN!!!", img: "/clash/zoro.jpg", accent: "#e23b2e", rotate: -2 },
+  { name: "Luffy", move: "Gear 5 · Bajrang Gun", sfx: "DON!!!", img: "/clash/luffy.jpg", accent: "#f2c014", rotate: 1.5 },
+  { name: "Naruto", move: "Sage · Rasengan", sfx: "GOOO!!!", img: "/clash/naruto.jpg", accent: "#2a7de1", rotate: -1.5 },
+  { name: "Sasuke", move: "Chidori · Kirin", sfx: "BZZT!!!", img: "/clash/sasuke.jpg", accent: "#8b3fd6", rotate: 2 },
 ];
 
 const ClashCard = ({
@@ -32,6 +30,7 @@ const ClashCard = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
+  const [failed, setFailed] = useState(false);
 
   return (
     <motion.div
@@ -45,14 +44,29 @@ const ClashCard = ({
       {/* Image frame */}
       <div className="relative aspect-[3/4] overflow-hidden border-2 border-ink bg-paper">
         <div className="absolute inset-0 halftone opacity-[0.08] pointer-events-none z-10" />
-        <img
-          src={fighter.img}
-          alt={`${fighter.name} in action`}
-          className="w-full h-full object-cover grayscale"
-          loading="lazy"
-          width={768}
-          height={1024}
-        />
+
+        {failed ? (
+          /* Fallback shown until the real image is added to public/clash/ */
+          <div
+            className="absolute inset-0 flex flex-col items-center justify-center gap-1 speedlines"
+            style={{ background: `radial-gradient(circle at 50% 40%, ${fighter.accent}22, transparent 70%)` }}
+          >
+            <span className="display-font text-5xl md:text-6xl" style={{ color: fighter.accent }}>
+              {fighter.name[0]}
+            </span>
+            <span className="handwritten text-[10px] text-ink-muted px-2 text-center">
+              add public/clash/{fighter.name.toLowerCase()}.jpg
+            </span>
+          </div>
+        ) : (
+          <img
+            src={fighter.img}
+            alt={`${fighter.name} in action`}
+            className="w-full h-full object-cover"
+            loading="lazy"
+            onError={() => setFailed(true)}
+          />
+        )}
 
         {/* Number badge */}
         <span className="absolute top-1.5 left-1.5 z-20 display-font text-[10px] bg-ink text-paper-light px-1.5 py-0.5 tracking-widest">
