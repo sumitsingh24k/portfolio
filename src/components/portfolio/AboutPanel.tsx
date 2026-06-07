@@ -6,12 +6,14 @@ export const AboutPanel = () => {
       <div className="absolute inset-0 halftone-light opacity-40 pointer-events-none" />
       <div className="relative">
         <p className="display-font text-2xl md:text-3xl text-ink leading-tight">
-          “Highly focused Software Engineer & passionate developer.”
+          “Backend systems by day, DSA by night.”
         </p>
         <p className="mt-3 text-sm md:text-base text-ink-soft leading-relaxed">
-          I possess a calm yet eager mind, dedicated to building scalable,
-          high-impact technical solutions. From full-stack platforms to
-          intelligent automation — I ship products that matter.
+          Currently building crypto wallet auth and gift-card rewards infra at
+          SwapSo while finishing B.E. in IT (AI & DS) at University of Mumbai.
+          3 internships, 3 shipped products, and 600+ DSA problems solved. Open
+          to full-time SDE roles in fintech, healthtech, or high-growth product
+          teams.
         </p>
         <p className="mt-3 handwritten text-sm text-ink">
           Let's build something extraordinary together.

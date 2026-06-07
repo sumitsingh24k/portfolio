@@ -5,10 +5,10 @@ import { SFX } from "./SFX";
 import mangaPoint from "@/assets/manga-point.png";
 
 const STATS = [
-  { value: 4, suffix: "×", label: "Hackathon Wins" },
+  { value: 600, suffix: "+", label: "DSA Problems" },
   { value: 8.5, suffix: "/10", label: "CGPA", decimal: true },
-  { value: 3, suffix: "+", label: "Shipped Projects" },
-  { value: 2, suffix: "", label: "Dev Roles" },
+  { value: 3, suffix: "", label: "Internships" },
+  { value: 4, suffix: "×", label: "Hackathon Wins" },
 ];
 
 const Counter = ({ to, decimal }: { to: number; decimal?: boolean }) => {
