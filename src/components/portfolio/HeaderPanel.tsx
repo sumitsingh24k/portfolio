@@ -37,7 +37,7 @@ export const HeaderPanel = () => {
           <Mail className="w-3.5 h-3.5" /> Email
         </a>
         <a
-          href="https://linkedin.com/in/sumit-singh"
+          href="https://www.linkedin.com/in/sumit-singh-964871260/"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-1.5 border-[2px] border-ink px-2.5 py-1 bg-paper hover:bg-ink hover:text-paper-light transition-colors"
