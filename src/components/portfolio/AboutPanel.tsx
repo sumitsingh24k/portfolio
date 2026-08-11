@@ -2,18 +2,20 @@ import { MangaPanel } from "./MangaPanel";
 
 export const AboutPanel = () => {
   return (
-    <MangaPanel label="About" className="md:col-span-7 relative">
+    <MangaPanel label="Summary" className="md:col-span-7 relative">
       <div className="absolute inset-0 halftone-light opacity-40 pointer-events-none" />
       <div className="relative">
         <p className="display-font text-2xl md:text-3xl text-ink leading-tight">
-          “Backend systems by day, DSA by night.”
+          AI & Data Science undergrad building ML products.
         </p>
         <p className="mt-3 text-sm md:text-base text-ink-soft leading-relaxed">
-          Currently building crypto wallet auth and gift-card rewards infra at
-          SwapSo while finishing B.E. in IT (AI & DS) at University of Mumbai.
-          3 internships, 3 shipped products, and 600+ DSA problems solved. Open
-          to full-time SDE roles in fintech, healthtech, or high-growth product
-          teams.
+          AI & Data Science undergrad (CGPA 8.6/10) with 3 internships and 3
+          shipped products across the ML product stack: NLP and speech
+          pipelines, LLM-agent automation, generative-AI features, and the
+          data/backend infrastructure that serves them at production traffic.
+          600+ DSA problems, 4x hackathon winner, GDSC Technical Head. Seeking
+          a Deep Learning / ML Engineer internship in LLMs and vision-language
+          systems.
         </p>
         <p className="mt-3 handwritten text-sm text-ink">
           Let's build something extraordinary together.

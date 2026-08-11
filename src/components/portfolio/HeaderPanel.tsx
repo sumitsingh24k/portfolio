@@ -16,7 +16,8 @@ export const HeaderPanel = () => {
             SINGH
           </h1>
           <p className="mt-3 text-sm md:text-base text-ink-soft max-w-sm">
-            SDE @ SwapSo · Backend & Full-Stack Engineer · Crypto, Fintech & Healthtech builder.
+            Deep Learning / ML Engineer Intern | AI & Data Science @ TCET |
+            NLP, Speech, LLM Agents & Generative AI | 600+ DSA
           </p>
         </div>
         <img
