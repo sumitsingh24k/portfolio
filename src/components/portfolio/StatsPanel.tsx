@@ -6,7 +6,7 @@ import mangaPoint from "@/assets/manga-point.png";
 
 const STATS = [
   { value: 600, suffix: "+", label: "DSA Problems" },
-  { value: 8.5, suffix: "/10", label: "CGPA", decimal: true },
+  { value: 8.6, suffix: "/10", label: "CGPA", decimal: true },
   { value: 3, suffix: "", label: "Internships" },
   { value: 4, suffix: "×", label: "Hackathon Wins" },
 ];

@@ -1,26 +1,32 @@
 import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 import { MangaPanel } from "./MangaPanel";
 import { SFX } from "./SFX";
 import mangaVictor from "@/assets/manga-victor.png";
 
 const PROJECTS = [
   {
-    title: "JanSetu Health System",
+    title: "Health_Jansetu",
     tagline: "Voice-to-Map Outbreak Detection",
-    stack: "React · Node.js · MongoDB · Python · Google Maps · Twilio",
+    stack: "React - Node.js - MongoDB - Python - Google Maps - Twilio",
     desc: "ASHA workers speak case reports; NLP extracts disease + location and a real-time map updates instantly. ML predicts outbreaks at 85% accuracy, cutting medication stockouts by 60%. Processes 1,000+ daily voice entries at 98% transcription accuracy.",
+    github: "https://github.com/sumitsingh24k/Health_Jansetu",
+    live: "https://health-jansetu.vercel.app/",
   },
   {
-    title: "Gov Assist",
+    title: "AI_Document_Assist",
     tagline: "AI Gov Form Auto-Fill (Chrome Ext.)",
-    stack: "React · Vite · Chrome Extensions API · MyScheme · Twilio",
-    desc: "Matches user documents against MyScheme government API (92% accuracy) and auto-fills applications via a prompt-engineered AI agent — 80% reduction in completion time. Real-time extension-to-webapp sync with WhatsApp/SMS alerts.",
+    stack: "React - Vite - Chrome Extensions API - MyScheme - Twilio",
+    desc: "Matches user documents against MyScheme government API (92% accuracy) and auto-fills applications via a prompt-engineered AI agent - 80% reduction in completion time. Real-time extension-to-webapp sync with WhatsApp/SMS alerts.",
+    github: "https://github.com/sumitsingh24k/AI_Document_Assist",
+    live: "https://ai-document-assist.vercel.app/",
   },
   {
     title: "Adzap",
     tagline: "AI Ad Campaign Platform",
-    stack: "React · Python · Node.js · Generative AI · ETL",
-    desc: "Full-stack ad platform with RBAC, audience segmentation and an AI creative generation engine — 75% faster production. ETL analytics dashboard improved campaign ROI tracking by 50%.",
+    stack: "React - Python - Node.js - Generative AI - ETL",
+    desc: "Full-stack ad platform with RBAC, audience segmentation and an AI creative generation engine - 75% faster production. ETL analytics dashboard improved campaign ROI tracking by 50%.",
+    github: "https://github.com/sumitsingh24k/Adzap_final",
   },
 ];
 
@@ -51,18 +57,44 @@ export const ProjectsPanel = () => {
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
             whileHover={{ y: -4 }}
-            className="group relative border-[3px] border-ink bg-paper-light p-4 shadow-[5px_5px_0_0_hsl(var(--ink))] hover:shadow-[8px_8px_0_0_hsl(var(--ink))] transition-shadow cursor-pointer"
+            className="group relative border-[3px] border-ink bg-paper-light p-4 shadow-[5px_5px_0_0_hsl(var(--ink))] hover:shadow-[8px_8px_0_0_hsl(var(--ink))] transition-shadow"
           >
-            <div className="absolute top-2 right-2 display-font text-xs bg-ink text-paper-light px-2 py-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
-              CLICK ME!
-            </div>
-            <div className="display-font text-xs text-ink-muted">№ 0{i + 1}</div>
-            <h3 className="display-font text-2xl text-ink leading-tight mt-1">{p.title}</h3>
+            {(p.github || p.live) && (
+              <div className="absolute top-2 right-2 display-font text-xs bg-ink text-paper-light px-2 py-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                OPEN!
+              </div>
+            )}
+            <div className="display-font text-xs text-ink-muted">No. 0{i + 1}</div>
+            <h3 className="display-font text-2xl text-ink leading-tight mt-1 break-words">{p.title}</h3>
             <p className="text-xs uppercase tracking-wider text-ink-soft font-semibold mt-1">
               {p.tagline}
             </p>
             <p className="text-xs handwritten text-ink-muted mt-2">{p.stack}</p>
             <p className="text-sm text-ink-soft mt-3 leading-snug">{p.desc}</p>
+            {(p.github || p.live) && (
+              <div className="mt-4 flex flex-wrap gap-2 text-xs md:text-sm">
+                {p.github && (
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 border-[2px] border-ink px-2.5 py-1 bg-paper hover:bg-ink hover:text-paper-light transition-colors"
+                  >
+                    <Github className="w-3.5 h-3.5" /> GitHub
+                  </a>
+                )}
+                {p.live && (
+                  <a
+                    href={p.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 border-[2px] border-ink px-2.5 py-1 bg-paper hover:bg-ink hover:text-paper-light transition-colors"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" /> Live
+                  </a>
+                )}
+              </div>
+            )}
           </motion.article>
         ))}
       </div>
