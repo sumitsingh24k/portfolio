@@ -9,41 +9,47 @@ import mangaFinisher from "@/assets/manga-finisher.png";
 
 const EXPERIENCE = [
   {
-    role: "Software Development Engineer",
-    company: "SwapSo · Remote",
-    period: "May 2026 – Present",
+    role: "Software Engineer",
+    company: "SwapSo · Internship",
+    period: "May 2026 - Present · 4 mos",
+    location: "Mumbai, Maharashtra, India · On-site",
     enemy: "AUTH CHAOS",
     sfx: "SECURE!",
     points: [
-      "Built OTP auth backend with TTL expiry, rate limiting, CAPTCHA & retry logic — cutting DB load and verification latency.",
-      "Integrated Hubble gift-card rewards into a crypto wallet: 400+ brand catalogue, idempotent 1.25% USDC cashback, AES-256-GCM & HMAC-SHA256 webhooks.",
-      "Shipped React Native voucher UI; configured Redis Cloud, MongoDB Atlas & connection pooling for prod.",
+      "Backend & full-stack engineering for fintech products — authentication, integrations, and scalable services.",
+      "Built an OTP authentication backend (Node.js, TypeScript, MongoDB, Redis) with TTL-based expiry, rate limiting, CAPTCHA, and retry/fallback logic — reducing DB load and improving verification response time under traffic spikes.",
+      "Architected a provider-abstracted gift-card rewards integration for a crypto wallet: event-driven webhook processing with HMAC-SHA256 verification, an idempotent 1.25% USDC cashback engine, AES-256-GCM encryption, and 400+ brand catalogue sync — a reusable integration pattern across reward providers.",
+      "Configured Redis caching, MongoDB Atlas, and connection pooling for production-scale deployment; shipped the React Native catalogue/voucher UI.",
     ],
-    stack: ["Node.js", "TypeScript", "MongoDB", "Redis", "React Native"],
+    stack: ["Node.js", "TypeScript", "Express.js", "MongoDB", "Redis", "React Native"],
   },
   {
-    role: "Software Developer (Consultant)",
-    company: "The Sibling Corp · Remote",
-    period: "Sep 2025 – Dec 2025",
+    role: "Software Engineer",
+    company: "The Sibling Corp · Internship",
+    period: "Sep 2025 - Dec 2025 · 4 mos",
+    location: "Mumbai, Maharashtra, India · Hybrid",
     enemy: "MIDDLEMEN",
     sfx: "BREAK!",
     points: [
-      "Shipped Quick Basket — farmer-to-consumer marketplace serving 500+ users on Android & iOS.",
-      "Architected scalable REST APIs and data models for end-to-end order management & mobile deployment.",
+      "Built Quick Basket — a farmer-to-consumer marketplace that eliminates supply-chain middlemen and improves farmer revenue margins.",
+      "Designed and shipped the platform end-to-end (Node.js, Express.js, MongoDB, React Native), launched on Android and iOS.",
+      "Architected scalable REST APIs, data models, and schemas for order management; owned the full feature lifecycle from client requirements through design, build, and mobile deployment.",
     ],
-    stack: ["Node.js", "Express", "MongoDB", "React Native"],
+    stack: ["Node.js", "Express.js", "MongoDB", "React Native"],
   },
   {
-    role: "Frontend Developer (Intern)",
-    company: "Growigh · Remote",
-    period: "Jul 2025 – Sep 2025",
+    role: "Frontend Developer",
+    company: "Growigh · Internship",
+    period: "Jul 2025 - Sep 2025 · 3 mos",
+    location: "Gwalior, Madhya Pradesh, India · Remote",
     enemy: "SLOW UX",
     sfx: "POLISH!",
     points: [
-      "Built pixel-perfect responsive React landing page — Lighthouse 64 → 91 via code splitting & asset optimization.",
-      "40% faster loads and 25% longer avg. session duration post-launch across Chrome, Firefox, Safari.",
+      "Built a fully responsive React.js landing page integrated with backend REST APIs — improved Lighthouse score from 64 to 91/100 via code splitting and asset optimization.",
+      "40% faster load time and 25% higher average session duration post-launch.",
+      "Ensured cross-browser compatibility and responsiveness across desktop, tablet, and mobile.",
     ],
-    stack: ["React", "TypeScript", "Tailwind"],
+    stack: ["React.js", "HTML", "CSS", "JavaScript", "REST APIs"],
   },
 ];
 
@@ -218,7 +224,8 @@ export const ExperiencePanel = () => {
               <h3 className="display-font text-xl md:text-2xl text-ink leading-tight">
                 {exp.role}
               </h3>
-              <p className="text-sm font-semibold text-ink-soft mb-2">{exp.company}</p>
+              <p className="text-sm font-semibold text-ink-soft">{exp.company}</p>
+              <p className="text-xs text-ink-muted mb-2">{exp.location}</p>
 
               <ul className="space-y-1.5 mb-3">
                 {exp.points.map((p, j) => (
