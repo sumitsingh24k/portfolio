@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, Code2 } from "lucide-react";
 import { MangaPanel } from "./MangaPanel";
+import { ResumeButton } from "./ResumeButton";
 import mangaGreet from "@/assets/manga-greet.png";
 
 export const HeaderPanel = () => {
@@ -31,6 +32,7 @@ export const HeaderPanel = () => {
       </div>
 
       <div className="flex flex-wrap gap-2 text-xs md:text-sm">
+        <ResumeButton />
         <a
           href="mailto:sumitharisingh@gmail.com"
           className="inline-flex items-center gap-1.5 border-[2px] border-ink px-2.5 py-1 bg-paper hover:bg-ink hover:text-paper-light transition-colors"

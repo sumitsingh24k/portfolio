@@ -1,5 +1,6 @@
 import { Mail, Github, Linkedin, Code2 } from "lucide-react";
 import { MangaPanel } from "./MangaPanel";
+import { ResumeButton } from "./ResumeButton";
 
 const LINKS = [
   { icon: Mail, label: "sumitharisingh@gmail.com", href: "mailto:sumitharisingh@gmail.com" },
@@ -25,6 +26,7 @@ export const ContactPanel = () => {
           <p className="text-sm text-ink-soft mt-1">+91 85916 18604</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-2.5">
+          <ResumeButton variant="card" label="Download Resume (PDF)" />
           {LINKS.map(({ icon: Icon, label, href }) => (
             <a
               key={label}
