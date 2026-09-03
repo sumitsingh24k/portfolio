@@ -5,17 +5,17 @@
 @tailwind utilities;
 
 /* Manga Portfolio Design System
-   Paper-cream background, sharp ink lines, halftone textures, dynamic SFX accents.
+   White textured-paper background, sharp ink lines, halftone textures, dynamic SFX accents.
    All colors HSL.
 */
 
 @layer base {
   :root {
-    --background: 42 35% 94%;
+    --background: 0 0% 98%;
     --foreground: 0 0% 6%;
 
-    --paper: 42 40% 92%;
-    --paper-light: 42 50% 96%;
+    --paper: 0 0% 98%;
+    --paper-light: 0 0% 100%;
     --ink: 0 0% 6%;
     --ink-soft: 0 0% 22%;
     --ink-muted: 0 0% 42%;
@@ -94,9 +94,16 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    background-image:
-      radial-gradient(hsl(var(--ink) / 0.05) 1px, transparent 1px);
-    background-size: 18px 18px;
+  }
+
+  /* The supplied crumpled-paper image is the page surface. */
+  .paper-page-texture {
+    background-color: #fafafa;
+    background-image: url("./assets/paper-texture.png");
+    background-position: top center;
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-attachment: fixed;
   }
 }
 

@@ -15,7 +15,7 @@ import { ScrollProgress, InkCursor } from "@/components/portfolio/ScrollEffects"
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-paper text-ink relative">
+    <main className="paper-page-texture min-h-screen text-ink relative">
       <ScrollProgress />
       <InkCursor />
 
