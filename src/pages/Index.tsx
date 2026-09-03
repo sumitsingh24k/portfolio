@@ -23,8 +23,8 @@ const Index = () => {
       <Marquee
         items={[
           "SUMIT SINGH",
-          "FULL-STACK DEVELOPER",
-          "IT ENGINEER",
+          "SOFTWARE DEVELOPMENT ENGINEER",
+          "BACKEND · APPLIED AI",
           "SHIP FAST",
           "BUILD BOLD",
           "MUMBAI · INDIA",
@@ -60,9 +60,10 @@ const Index = () => {
         reverse
         variant="accent"
         items={[
-          "AVAILABLE FOR HIRE",
+          "OPEN TO FULL-TIME SDE / AI-ML ROLES",
           "OPEN TO COLLABS",
-          "REACT · NODE · PYTHON",
+          "NODE · TYPESCRIPT · MONGODB · REDIS",
+          "NLP · LLM AGENTS · RAG",
           "LET'S BUILD",
           "DRAWN WITH INK",
           "SHIPPED WITH CODE",

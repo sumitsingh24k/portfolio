@@ -6,19 +6,26 @@ export const AboutPanel = () => {
       <div className="absolute inset-0 halftone-light opacity-40 pointer-events-none" />
       <div className="relative">
         <p className="display-font text-2xl md:text-3xl text-ink leading-tight">
-          AI & Data Science undergrad building ML products.
+          I build the backend that carries production traffic — and the AI that
+          rides on top of it.
         </p>
         <p className="mt-3 text-sm md:text-base text-ink-soft leading-relaxed">
-          AI & Data Science undergrad (CGPA 8.6/10) with 3 internships and 3
-          shipped products across the ML product stack: NLP and speech
-          pipelines, LLM-agent automation, generative-AI features, and the
-          data/backend infrastructure that serves them at production traffic.
-          600+ DSA problems, 4x hackathon winner, GDSC Technical Head. Seeking
-          a Deep Learning / ML Engineer internship in LLMs and vision-language
-          systems.
+          Software engineer pursuing a B.Tech in AI &amp; Data Science (CGPA
+          8.6/10) with 3 internships across backend systems, full-stack apps,
+          and applied AI. Most recently I built production infrastructure at
+          SwapSo — OTP authentication, event-driven webhooks, and idempotent
+          payment flows on Node.js, MongoDB, and Redis. Alongside that, I ship
+          the full ML stack: NLP pipelines, LLM agents, RAG systems, and
+          document-extraction pipelines.
+        </p>
+        <p className="mt-3 text-sm md:text-base text-ink-soft leading-relaxed">
+          My rule for every AI feature: <span className="font-semibold text-ink">rules
+          decide, the model only speaks.</span> Deterministic logic first, LLM on
+          top, schema validation around the output — pull the model's API key and
+          the product still works.
         </p>
         <p className="mt-3 handwritten text-sm text-ink">
-          Let's build something extraordinary together.
+          600+ DSA problems · 4x hackathon winner · GDSC Technical Head.
         </p>
       </div>
     </MangaPanel>

@@ -2,10 +2,26 @@ import { Trophy, Users, Code, GitBranch } from "lucide-react";
 import { MangaPanel } from "./MangaPanel";
 
 const ITEMS = [
-  { icon: Users, title: "Technical Head", sub: "Google Developer Student Club · TCET" },
-  { icon: Code, title: "Problem Setter", sub: "Shastra Coding Club · TCET" },
-  { icon: Trophy, title: "4× Hackathon Winner", sub: "SIH Finalist (Institute Level)" },
-  { icon: GitBranch, title: "Open Source", sub: "GirlScript Summer of Code (GSSoC)" },
+  {
+    icon: Users,
+    title: "Technical Head — GDSC, TCET",
+    sub: "Designed and delivered technical workshops and live demos for 200+ student developers.",
+  },
+  {
+    icon: Code,
+    title: "Problem Setter — Shastra Coding Club",
+    sub: "Authored competitive programming problems for inter-college contests.",
+  },
+  {
+    icon: Trophy,
+    title: "4× Hackathon Winner",
+    sub: "Smart India Hackathon — Institute-Level Finalist.",
+  },
+  {
+    icon: GitBranch,
+    title: "Open Source Contributor",
+    sub: "GirlScript Summer of Code 2024 · 600+ DSA problems solved.",
+  },
 ];
 
 export const ImpactPanel = () => {

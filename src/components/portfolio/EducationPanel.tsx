@@ -12,8 +12,14 @@ export const EducationPanel = () => {
               <h3 className="display-font text-xl md:text-2xl text-ink">University of Mumbai</h3>
               <span className="handwritten text-xs text-ink-muted">Aug 2023 – Present</span>
             </div>
-            <p className="text-sm text-ink-soft">B.Tech in AI&DS</p>
+            <p className="text-sm text-ink-soft">
+              B.Tech — Artificial Intelligence &amp; Data Science (TCET)
+            </p>
             <p className="text-sm font-semibold text-ink">CGPA: 8.6 / 10</p>
+            <p className="text-xs text-ink-muted mt-1.5 leading-snug">
+              Coursework: Machine Learning, Deep Learning, NLP, Linear Algebra &amp;
+              Probability, DSA, DBMS.
+            </p>
           </div>
           <div className="border-t-2 border-dashed border-ink/40 pt-3">
             <div className="flex items-baseline justify-between gap-2 flex-wrap">

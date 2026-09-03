@@ -9,7 +9,7 @@ export const HeaderPanel = () => {
       <div className="flex items-start gap-4">
         <div className="flex-1">
           <p className="handwritten text-xs uppercase tracking-[0.3em] text-ink-muted mb-2">
-            // Developer Portfolio
+            // Software Engineer · Backend & Applied AI
           </p>
           <h1 className="display-font text-5xl md:text-7xl leading-[0.9] text-ink">
             SUMIT
@@ -17,8 +17,12 @@ export const HeaderPanel = () => {
             SINGH
           </h1>
           <p className="mt-3 text-sm md:text-base text-ink-soft max-w-sm">
-            Deep Learning / ML Engineer Intern | AI & Data Science @ TCET |
-            NLP, Speech, LLM Agents & Generative AI | 600+ DSA
+            B.Tech AI &amp; Data Science @ TCET (CGPA 8.6) · 3 internships ·
+            Node.js, TypeScript, MongoDB, Redis · NLP, LLM Agents &amp; RAG ·
+            600+ DSA
+          </p>
+          <p className="mt-2 text-sm font-semibold text-ink">
+            Seeking full-time SDE / AI-ML Engineer roles.
           </p>
         </div>
         <img
@@ -32,7 +36,8 @@ export const HeaderPanel = () => {
       </div>
 
       <div className="flex flex-wrap gap-2 text-xs md:text-sm">
-        <ResumeButton />
+        <ResumeButton track="sde" />
+        <ResumeButton track="ml" />
         <a
           href="mailto:sumitharisingh@gmail.com"
           className="inline-flex items-center gap-1.5 border-[2px] border-ink px-2.5 py-1 bg-paper hover:bg-ink hover:text-paper-light transition-colors"
